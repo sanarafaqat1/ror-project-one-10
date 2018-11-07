@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_07_110604) do
+ActiveRecord::Schema.define(version: 2018_11_07_141402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,9 @@ ActiveRecord::Schema.define(version: 2018_11_07_110604) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "academy_id"
+    t.bigint "award_id"
     t.index ["academy_id"], name: "index_actors_on_academy_id"
+    t.index ["award_id"], name: "index_actors_on_award_id"
   end
 
   create_table "awards", force: :cascade do |t|
@@ -39,6 +41,8 @@ ActiveRecord::Schema.define(version: 2018_11_07_110604) do
     t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "actor_id"
+    t.index ["actor_id"], name: "index_awards_on_actor_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,4 +60,6 @@ ActiveRecord::Schema.define(version: 2018_11_07_110604) do
   end
 
   add_foreign_key "actors", "academies"
+  add_foreign_key "actors", "awards"
+  add_foreign_key "awards", "actors"
 end

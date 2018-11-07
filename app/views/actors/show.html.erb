@@ -28,5 +28,18 @@
   <strong>Academy Location:</strong>
   <%= @actor.academy.location %>
 </p>
+
+<p>
+
+    <% @awards.each do |award| %>
+     <% if @actor.id == award.actor_id%>
+      <tr>
+        <td><%= award.name %></td>
+        <td><%= award.category %></td>
+        <td><%= award.year %></td>
+      </tr>
+    <% end %>
+   <% end %>
+
 <%= link_to 'Edit', edit_actor_path(@actor) %> |
 <%= link_to 'Back', actors_path %>

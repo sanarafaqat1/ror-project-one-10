@@ -10,6 +10,7 @@ class ActorsController < ApplicationController
   # GET /actors/1
   # GET /actors/1.json
   def show
+    @awards = Award.where(:actor_id == @actor.id)
   end
 
   # GET /actors/new
@@ -20,6 +21,7 @@ class ActorsController < ApplicationController
   # GET /actors/1/edit
   def edit
   end
+
 
   # POST /actors
   # POST /actors.json
