@@ -22,7 +22,7 @@
         <td><%= actor.description %></td>
         <td><%= link_to 'Show', actor %></td>
         <td><%= link_to 'Edit', edit_actor_path(actor) %></td>
-        <td><%= link_to 'Destroy', actor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy',actor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,6 +30,6 @@
 
 <br>
 
-<%= link_to 'New Actor', new_actor_path, :class => 'btn btn-default' %>
-<%= link_to 'Award', awards_path%>
-<%= link_to 'Academy', academies_path %>
+<%= link_to 'New Actor', new_actor_path, :class => 'btn btn-primary' %>
+<%= link_to 'Award', awards_path, :class => 'btn btn-warning'%>
+<%= link_to 'Academy', academies_path, :class => 'btn btn-danger' %>
