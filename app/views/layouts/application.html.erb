@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <button type="button"
+    onclick="document.getElementById('demo').innerHTML = Date()">
+    Date and Time</button>
+
+    <p id="demo"></p>
       <% if user_signed_in? %>
       <div class="log">
          Logged in as <strong><%= current_user.email %></strong>.
@@ -21,6 +26,5 @@
         <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
         <% end %>
       <%= yield %>
-
   </body>
 </html>

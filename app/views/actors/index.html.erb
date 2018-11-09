@@ -12,7 +12,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @actors.each do |actor| %>
       <tr>
@@ -29,7 +28,12 @@
 </table>
 
 <br>
-
 <%= link_to 'New Actor', new_actor_path, :class => 'btn btn-primary' %>
 <%= link_to 'Award', awards_path, :class => 'btn btn-warning'%>
-<%= link_to 'Academy', academies_path, :class => 'btn btn-danger' %>
+<%= link_to 'Academy', academies_path, :class => 'btn btn-danger'%>
+<br>
+<br>
+<img src="robin.jpg" alt="tulli" width="200" height="250">
+<img src="anne.jpg" alt="tulli" width="200" height="250">
+<img src="jessica-chastain.jpg"  width="250" height="250">
+<img src="viola-davis-1.jpg"  width="250" height="250">
