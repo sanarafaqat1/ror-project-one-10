@@ -6,21 +6,20 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  float: center;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-
-}
+  left: 0;
+  width: 100%;
+  }
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
-
 
 a {
   color: #000;
@@ -30,7 +29,7 @@ a {
   }
 
   &:hover {
-    color: #fff;
+    color: pink;
     background-color: #000;
   }
 }
@@ -47,9 +46,6 @@ div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
-}
-.table{
-   align-content: center;
 }
 
 #notice {
@@ -77,16 +73,16 @@ div {
     margin: -7px -7px 0;
     background-color: #c00;
     color: #fff;
-    text-align: center;
   }
 
   ul li {
     font-size: 12px;
     list-style: square;
-
   }
 }
-
+.log {
+  text-align:center;
+}
 label {
   display: block;
 }
